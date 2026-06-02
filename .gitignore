@@ -6,3 +6,6 @@ target/
 *.iml
 .vscode/
 *.DS_Store
+
+# Internal build plan / agent instructions, not for the public repo
+CLAUDE.md
