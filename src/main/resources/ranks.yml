@@ -1,0 +1,36 @@
+# ============================================================
+#  Rank definitions
+#
+#  The rank order is taken from the keys below (top to bottom).
+#  When config.yml -> ranks.mode is "formula", the costs here are
+#  ignored and computed as base-cost * multiplier^index instead.
+#  When mode is "explicit", these exact costs are used.
+# ============================================================
+
+ranks:
+  A: 1000
+  B: 2500
+  C: 5000
+  D: 9000
+  E: 15000
+  F: 24000
+  G: 38000
+  H: 58000
+  I: 87000
+  J: 130000
+  K: 195000
+  L: 290000
+  M: 430000
+  N: 640000
+  O: 950000
+  P: 1400000
+  Q: 2100000
+  R: 3100000
+  S: 4600000
+  T: 6900000
+  U: 10000000
+  V: 15000000
+  W: 23000000
+  X: 34000000
+  Y: 51000000
+  Z: 76000000

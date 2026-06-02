@@ -1,0 +1,86 @@
+# ============================================================
+#  Custom pickaxe enchants
+#
+#  cost(level) = base-cost * cost-multiplier^(level-1)   (tokens)
+#  Types:
+#    PASSIVE -> effect while holding the pickaxe (haste, speed, ...)
+#    GREED   -> bonus tokens/money/sell value per block
+#    PROC    -> chance to break extra blocks inside the mine
+# ============================================================
+
+enchants:
+  EFFICIENCY:
+    display-name: "Efficiency"
+    type: PASSIVE
+    max-level: 100
+    base-cost: 100
+    cost-multiplier: 1.15
+
+  HASTE:
+    display-name: "Haste"
+    type: PASSIVE
+    max-level: 5
+    base-cost: 1500
+    cost-multiplier: 2.0
+
+  SPEED:
+    display-name: "Speed"
+    type: PASSIVE
+    max-level: 3
+    base-cost: 1000
+    cost-multiplier: 2.0
+
+  JUMP:
+    display-name: "Jump"
+    type: PASSIVE
+    max-level: 3
+    base-cost: 800
+    cost-multiplier: 2.0
+
+  FORTUNE:
+    display-name: "Fortune"
+    type: GREED
+    max-level: 50
+    base-cost: 250
+    cost-multiplier: 1.2
+    bonus-per-level: 0.1
+
+  TOKEN_GREED:
+    display-name: "Token Greed"
+    type: GREED
+    max-level: 25
+    base-cost: 250
+    cost-multiplier: 1.25
+    bonus-per-level: 0.05
+
+  MONEY_GREED:
+    display-name: "Money Greed"
+    type: GREED
+    max-level: 25
+    base-cost: 250
+    cost-multiplier: 1.25
+    bonus-per-level: 0.05
+
+  EXPLOSIVE:
+    display-name: "Explosive"
+    type: PROC
+    max-level: 50
+    base-cost: 500
+    cost-multiplier: 1.3
+    proc-chance-per-level: 0.01
+
+  LASER:
+    display-name: "Laser"
+    type: PROC
+    max-level: 50
+    base-cost: 600
+    cost-multiplier: 1.3
+    proc-chance-per-level: 0.01
+
+  JACKHAMMER:
+    display-name: "Jackhammer"
+    type: PROC
+    max-level: 25
+    base-cost: 2000
+    cost-multiplier: 1.4
+    proc-chance-per-level: 0.004

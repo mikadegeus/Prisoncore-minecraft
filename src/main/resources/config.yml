@@ -1,0 +1,67 @@
+# ============================================================
+#  PrisonCore configuration
+# ============================================================
+
+database:
+  # sqlite (file-based, zero setup) or mysql
+  type: sqlite
+  host: localhost
+  port: 3306
+  database: prisoncore
+  username: root
+  password: ""
+  pool-size: 10
+  connection-timeout-ms: 30000
+
+economy:
+  currency-symbol: "$"
+
+pickaxe:
+  give-on-first-join: true
+  # Only the prison pickaxe may break blocks inside mines.
+  required-to-mine: true
+  unbreakable: true
+
+mining:
+  # How often dirty player data is flushed to the database (seconds).
+  flush-interval-seconds: 30
+  # Hard cap on blocks broken by a single proc-enchant, guarding against lag spikes.
+  max-proc-blocks-per-break: 256
+  base-tokens-per-block: 1
+
+ranks:
+  # formula -> cost(index) = base-cost * multiplier^index
+  # explicit -> costs are read from ranks.yml
+  mode: formula
+  base-cost: 1000
+  multiplier: 1.5
+
+prestige:
+  per-prestige-sell-multiplier: 0.1
+  per-prestige-token-multiplier: 0.05
+
+messages:
+  prefix: "&8[&bPrison&8] "
+  no-permission: "&cJe hebt geen toestemming."
+  player-only: "&cAlleen spelers kunnen dit commando gebruiken."
+  reloaded: "&aPrisonCore configuratie herladen."
+  stats-header: "&b&lJouw Prison-profiel"
+  stats-rank: "&7Rank: &f{rank}"
+  stats-prestige: "&7Prestige: &f{prestige}"
+  stats-balance: "&7Saldo: &f{balance}"
+  stats-tokens: "&7Tokens: &f{tokens}"
+  stats-blocks: "&7Blokken gebroken: &f{blocks}"
+  stats-multiplier: "&7Sell-multiplier: &f{multiplier}x"
+  rankup-success: "&aJe bent gerankt naar &f{rank}&a!"
+  rankup-max-rank: "&eJe staat op de hoogste rank. Prestige om verder te gaan."
+  not-enough-money: "&cNiet genoeg geld. Nodig: &f{cost}&c."
+  prestige-success: "&dPrestige &f{prestige}&d! Je multiplier is nu &f{multiplier}x&d."
+  prestige-need-max-rank: "&cJe moet op de hoogste rank staan om te prestigen."
+  sold: "&aVerkocht voor &f{amount}&a."
+  nothing-to-sell: "&eJe hebt niets om te verkopen."
+  autosell-on: "&aAutosell staat nu &faan&a."
+  autosell-off: "&eAutosell staat nu &fuit&e."
+  not-enough-tokens: "&cNiet genoeg tokens. Nodig: &f{cost}&c."
+  enchant-upgraded: "&aEnchant &f{enchant} &anaar level &f{level}&a!"
+  mine-locked: "&cDeze mine vereist rank &f{rank}&c."
+  mine-resetting: "&eMine &f{mine} &ewordt over &f{seconds}s &egereset."

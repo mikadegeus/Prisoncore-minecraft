@@ -1,0 +1,38 @@
+# ============================================================
+#  Mine seed definitions
+#
+#  These are imported into the database on first start (when the
+#  mines table is empty). After that the database is the source of
+#  truth; edit mines in-game (admin tooling, M8) or wipe the table
+#  to re-seed from this file.
+#
+#  required-rank is a zero-based index: 0 = rank A, 1 = rank B, ...
+# ============================================================
+
+mines:
+  A:
+    world: world
+    corner1: { x: 100, y: 60, z: 100 }
+    corner2: { x: 130, y: 70, z: 130 }
+    teleport: { x: 115, y: 72, z: 115, yaw: 0, pitch: 0 }
+    required-rank: 0
+    reset-seconds: 300
+    reset-percentage: 25
+    palette:
+      - { material: STONE, weight: 70 }
+      - { material: COAL_ORE, weight: 20 }
+      - { material: IRON_ORE, weight: 10 }
+
+  B:
+    world: world
+    corner1: { x: 140, y: 60, z: 100 }
+    corner2: { x: 170, y: 70, z: 130 }
+    teleport: { x: 155, y: 72, z: 115, yaw: 0, pitch: 0 }
+    required-rank: 1
+    reset-seconds: 300
+    reset-percentage: 25
+    palette:
+      - { material: STONE, weight: 55 }
+      - { material: COAL_ORE, weight: 20 }
+      - { material: IRON_ORE, weight: 15 }
+      - { material: GOLD_ORE, weight: 10 }

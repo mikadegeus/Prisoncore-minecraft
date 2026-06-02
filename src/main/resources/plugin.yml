@@ -1,0 +1,62 @@
+name: PrisonCore
+version: '${project.version}'
+main: dev.mika.prisoncore.PrisonCore
+api-version: '1.21'
+author: Mika
+description: A complete prison-server core with mines, ranks, prestige, selling, tokens and custom pickaxe enchants.
+softdepend: [Vault, FastAsyncWorldEdit]
+
+commands:
+  prison:
+    description: Open the prison hub and view your stats.
+    aliases: [pc]
+    permission: prisoncore.use
+  mine:
+    description: Open the mine list or teleport to a mine.
+    aliases: [mines]
+    permission: prisoncore.use
+  rankup:
+    description: Open the rankup menu, or rank up with "max".
+    aliases: [ru]
+    permission: prisoncore.use
+  rankupmax:
+    description: Rank up as far as you can afford.
+    aliases: [rum]
+    permission: prisoncore.use
+  prestige:
+    description: Open the prestige menu, or prestige with "max".
+    aliases: [pres]
+    permission: prisoncore.use
+  sell:
+    description: Open the sell menu, or sell hand/all, or toggle auto.
+    permission: prisoncore.use
+  sellall:
+    description: Sell everything sellable in your inventory.
+    permission: prisoncore.use
+  enchant:
+    description: Open the pickaxe enchant menu.
+    aliases: [enchants, pickaxe]
+    permission: prisoncore.use
+  tokens:
+    description: View your tokens, pay another player, or grant tokens.
+    aliases: [token]
+    permission: prisoncore.use
+  booster:
+    description: View active boosters, or start one as an admin.
+    aliases: [boosters]
+    permission: prisoncore.use
+  prisonadmin:
+    description: Admin tools for mines, the selection wand and reload.
+    aliases: [pa]
+    permission: prisoncore.admin
+
+permissions:
+  prisoncore.use:
+    description: Basic access to PrisonCore commands.
+    default: true
+  prisoncore.admin:
+    description: Administrative tools, mine management and reload.
+    default: op
+  prisoncore.autosell:
+    description: Allows toggling autosell.
+    default: true
